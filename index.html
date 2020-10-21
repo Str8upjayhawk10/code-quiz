@@ -4,10 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
+    <!-- Link Bootstrap, Import Google Fonts, Link CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <!-- Timer -->
+<div id="timer">Time: <span id="time">0</span></div>
+
+<!-- Parent div -->
+<div class="container">
+    
+    <div class="intro">
+    <h1>JavaScript Challenge!</h1>
+    
+    <p>You have <span>50sec</span> to answer <span>5 multiple-choice questions</span>. When a question is incorrectly answered time is subtracted from the clock. WHEN all questions are answered or the timer reaches 0
+        then the game is over.</p>
+
+        <button id="start-btn" class="start-btn btn">Start Quiz</button>
+        
+    </div>
+
+    <!-- Question container add class hide hide questions -->
+
+    <div id="question-container" class="hide">
+
+    <!--  -->
+    <div id="question">Question</div>
+
+<!-- four button grid multiple choice -->
+        <div id="answer-buttons" class="btn-grid">
+
+            <button id="answer1" class="btn">Answer 1</button>
+            <button id="answer2" class="btn">Answer 2</button>
+            <button id="answer3" class="btn">Answer 3</button>
+            <button id="answer4" class="btn">Answer 4</button>
+
+        </div>
+    </div>
+
+    <!-- Control section -->
+    <div id="control" class="hide">
+
+        <button id="back-btn" class="back-btn btn">Go Back</button>
+        <button id="highscore-btn" class="highscore-btn btn">Clear Highscore</button>
+
+        <div id="enter-initials">
+            <input type="text" id="Enter Initials">
+            <button id="submit-btn" class="submit-btn btn"></button>
+        </div>
+
+    </div>
+
 
     
+    
+</div>
+
     <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
 </body>
 </html>
