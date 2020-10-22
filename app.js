@@ -1,28 +1,29 @@
+// Qustion & Answer Array
 var questionsArray = [
     {
-        question: "What is a Variable", 
-        answers: ["a", "b", "c", "d",], 
-        correct: "c"
+        question: "What is a Variable?", 
+        answers: ["A Holds data value that can be change anytime. ", "B Reserve keyword that declare a variable ", "C Anything that can vary.", "D None Above",], 
+        correct: "C Anything that can vary"
     },
     {
-        question: "", 
-        answers: ["", "", "", "",], 
-        correct: ""
+        question: "Which program does JavaScript support?", 
+        answers: ["A Object-Oriented Program", "B Object-Procedural Program", "C Imperative-Object Program", "D None of the Above",], 
+        correct: "A Object-Oriented Program"
     },
     {
-        question: "", 
-        answers: ["", "", "", "",], 
-        correct: ""
+        question: "What is JavaScript(JS)?", 
+        answers: ["A Increased lightweight interperted interaction", "B Network-centric applications", "C Programming language with procedural-oriented capabilities", "D None of the Above",], 
+        correct: "D Programming language with object-oriented capabilities"
     },
     {
-        question: "", 
-        answers: ["", "", "", "",], 
-        correct: ""
+        question: "What does an array do?", 
+        answers: ["A Stores objects in a fixed-size sequential collection", "B Lets you store multiple values in a single variable", "C Uses a collection of elements of the same type.", "D None of the Above",], 
+        correct: "B Lets you store multiple values in a single variable"
     },
     {
-        question: "", 
-        answers: ["", "", "", "",], 
-        correct: ""
+        question: "What is a boolean?", 
+        answers: ["A Datatype that returns either of two values ", "B Datatype that express a condition", "C Used as an object to get the value of a variable", "D None of the Above",], 
+        correct: "A Datatype that returns either of two values "
     },
 ]
 
@@ -39,9 +40,11 @@ var controlEl = document.querySelector("#control");
 var timeEl = document.querySelector("#time");
 var time = 50;
 var timerFun;
+var highscore = 0;
+var highScoreFuc;
 var questionIndex = 0;
-// Creadted functio /start quiz
 
+// Creadted functio /start quiz
 function startQuiz() {
 console.log("startQuiz")
 introEl.classList.add("hide");
@@ -61,12 +64,12 @@ function countDown () {
     }
 }
 function showQuestions () {
-   var currentQuestion = questionsArray[questionIndex]
+var currentQuestion = questionsArray[questionIndex]
     questionEl.textContent = currentQuestion.question
     for (var i = 0; i < currentQuestion.answers.length; ++i) {
         var answer = document.getElementById(`answer${i+1}`);
-      answer.textContent = currentQuestion.answers[i]; 
-      answer.onclick = () => checkQuestion(i)
+    answer.textContent = currentQuestion.answers[i]; 
+    answer.onclick = () => checkQuestion(i)
 
     }
 }
@@ -100,4 +103,4 @@ function gameOver () {
 
 
 
-// startBtnEl.onclick = startQuiz
+startBtnEl.onclick = startQuiz

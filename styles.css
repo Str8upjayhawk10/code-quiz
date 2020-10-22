@@ -7,7 +7,7 @@ body {
 }
 .display {
     border: none;
-    /* color: whitesmoke; */
+    
 }
 #timer, #highscore {
     font-size: 25px;
@@ -24,46 +24,133 @@ body {
 
 .container {
     justify-content: center;
+    margin-top: 10%;
 }
 
 /* .intro {
    margin: 25px 25px;
     
 } */
-.hide {
-    display: none;
-}
 
 h1 { 
     text-align: center;
     
+    
 }
 p {
     text-align: center;
+    font-size: 25px;
 }
 span {
     color: red;
 } 
 
-/* #start-btn {
-    background-color: green;
-    text-align: center;
-    border: 2px solid red;
+#start-btn {
+    border: 3px solid rgb(41, 232, 41);
     font-size: 25px;
-    margin: auto;
-    width: 50%;
-    /* border: 3px solid green; */
-    padding: 10px;
+    position: relative;
+    left: 45%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transform: translate(-50% -50%);
+    border-radius: 7px;
+    transition: .6s;
+    overflow: hidden;
+    cursor: pointer;
+}
+#start-btn:focus {
+    outline: none;
+}
+#start-btn::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: rgb(194, 36, 36,.5);
+}
+
+
+#question-container {
+    width: 60vw;
+    height: 40vh;
+    /* border: 5px solid rgb(41, 232, 41); */
+    margin: 20px auto;
     
- */
+}
+#question {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+#answer1 {
+    margin: 5px;
+    width:  80%;
+    height: 50px;
+    /* border: 3px solid rgb(41, 232, 41); */
+}
+#answer2 {
+    margin: 5px;
+    width:  80%;
+    height: 50px;
+    /* border: 3px solid rgb(41, 232, 41); */
+}
+#answer3 {
+    margin: 5px;
+    width:  80%;
+    height: 50px;
+    /* border: 3px solid rgb(41, 232, 41); */
+    
+}
+#answer4 {
+    margin: 5px;
+    width:  80%;
+    height: 50px;
+    /* border: 3px solid rgb(41, 232, 41); */
+    
+}
+#control {
+    width: 500px;
+    height: 125px;
+    /* border: 3px solid black; */
+    margin: 20px auto;
+    position: relative;
+}
+#enter-initials {
+    width: 300px;
+    position: absolute;
+    top: 5px;
+    padding-left: 25px;
+    cursor: pointer;
+}
+#submit-btn {
+    border: 3px solid black;
+    position: absolute;
+    top: 0px;
+    right: -150px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#back-btn {
+    border: 5px solid black;
+    position: absolute;
+    bottom: 0px;
+    right: 70px;
+    margin: 0 30px;
+    cursor: pointer;
+
+}
+#highscore-btn {
+    border: 5px solid black;
+    position: absolute;
+    bottom: 0px; 
+    left: 100px;
+    margin: 0 30px;
+    cursor: pointer;
+}
 
 
-
-/* }
-.btn-grid {
-    display: grid;
-    gap: 5px;
-    margin: 20px 0;
-
-
-} */
+.hide { 
+    display: none;
+} 
