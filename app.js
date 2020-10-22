@@ -100,4 +100,4 @@ function gameOver () {
 
 
 
-startBtnEl.onclick = startQuiz
+// startBtnEl.onclick = startQuiz

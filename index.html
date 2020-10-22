@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <!-- Timer -->
-<div id="timer">Time: <span id="time">0</span></div>
+    <!-- Timer/Highscore -->
+    <header class="display"> 
 
+    <div id="timer">Timer:<span id="time">0</span></div>
+    <div id="highscore">High Score:<span id="highscore">0</span></div>
+
+    </header>
 <!-- Parent div -->
 <div class="container">
     
@@ -26,6 +30,7 @@
         <button id="start-btn" class="start-btn btn">Start Quiz</button>
         
     </div>
+</div>
 
     <!-- Question container add class hide hide questions -->
 
@@ -61,7 +66,6 @@
 
     
     
-</div>
 
     <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

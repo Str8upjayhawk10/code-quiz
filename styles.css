@@ -1,53 +1,69 @@
-*, *::before, *::after {
-    font-family: 'Oswald', sans-serif;
-    box-sizing: border-box;
-    /* background-color: black; */
-}
 body {
     padding: 0;
     margin: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
     background-color: blue;
+    position: relative;
+    color: whitesmoke;
+}
+.display {
+    border: none;
     /* color: whitesmoke; */
+}
+#timer, #highscore {
     font-size: 25px;
-    
 }
+
+#timer { 
+    float: right;
+    position: relative;
+    right: 10%;
+} 
+#highscore {
+    padding-left: 5%;
+}
+
 .container {
-    background-color: white;
-    width: 800px;
-    max-width: 80%;
-    border-radius: 10px;
-    padding: 10px;
-    
+    justify-content: center;
 }
+
+/* .intro {
+   margin: 25px 25px;
+    
+} */
 .hide {
     display: none;
 }
 
-h1 {
+h1 { 
     text-align: center;
+    
 }
 p {
     text-align: center;
 }
 span {
     color: red;
-}
+} 
 
-#start-btn {
-    justify-content: center;
-    /* color: whitesmoke; */
-}
-.start-btn btn {
+/* #start-btn {
+    background-color: green;
+    text-align: center;
+    border: 2px solid red;
+    font-size: 25px;
+    margin: auto;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+    
+ */
 
-}
+
+
+/* }
 .btn-grid {
     display: grid;
     gap: 5px;
+    margin: 20px 0;
 
 
-}
+} */
