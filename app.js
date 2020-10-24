@@ -76,7 +76,7 @@ function showQuestions () {
     for (let i = 0; i < currentQuestion.answers.length; ++i) {
         let answer = document.getElementById(`answer${i+1}`);
     answer.textContent = currentQuestion.answers[i]; 
-    answer.addEventListener=() => checkQuestion(i)
+    answer.onclick = () => checkQuestion(i)
     
 }
 
