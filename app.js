@@ -1,78 +1,85 @@
-// Qustion & Answer Array
+// questionsArray is the variable assign to an array[] all 5 ? & correct answer is within the array
 var questionsArray = [
     {
         question: "What is a Variable?", 
-        answers: ["A Holds data value that can be change anytime. ", "B Reserve keyword that declare a variable ", "C Anything that can vary.", "D None Above",], 
-        correct: "C Anything that can vary"
+        answers: ["A: Holds data value that can be change anytime. ", "B: Reserve keyword that declare a variable ", "C: Anything that can vary.", "D: None Above",], 
+        correct: "C: Anything that can vary"
     },
     {
         question: "Which program does JavaScript support?", 
-        answers: ["A Object-Oriented Program", "B Object-Procedural Program", "C Imperative-Object Program", "D None of the Above",], 
-        correct: "A Object-Oriented Program"
+        answers: ["A: Object-Oriented Program", "B: Object-Procedural Program", "C: Imperative-Object Program", "D: None of the Above",], 
+        correct: "A: Object-Oriented Program"
     },
     {
         question: "What is JavaScript(JS)?", 
-        answers: ["A Increased lightweight interperted interaction", "B Network-centric applications", "C Programming language with procedural-oriented capabilities", "D None of the Above",], 
-        correct: "D Programming language with object-oriented capabilities"
+        answers: ["A: Increased lightweight interperted interaction", "B: Network-centric applications", "C: Programming language with procedural-oriented capabilities", "D: Programming language with object-oriented capabilities",], 
+        correct: "D: Programming language with object-oriented capabilities"
     },
     {
         question: "What does an array do?", 
-        answers: ["A Stores objects in a fixed-size sequential collection", "B Lets you store multiple values in a single variable", "C Uses a collection of elements of the same type.", "D None of the Above",], 
-        correct: "B Lets you store multiple values in a single variable"
+        answers: ["A: Stores objects in a fixed-size sequential collection", "B: Lets you store multiple values in a single variable", "C: Uses a collection of elements of the same type.", "D: None of the Above",], 
+        correct: "B: Lets you store multiple values in a single variable"
     },
     {
         question: "What is a boolean?", 
-        answers: ["A Datatype that returns either of two values ", "B Datatype that express a condition", "C Used as an object to get the value of a variable", "D None of the Above",], 
-        correct: "A Datatype that returns either of two values "
+        answers: ["A: Datatype that returns either of two values ", "B: Datatype that express a condition", "C: Used as an object to get the value of a variable", "D: None of the Above",], 
+        correct: "A: Datatype that returns either of two values "
     },
 ]
 
-
-
-
-
-// Create Variable / Global space
+// Create Variables "Global Space" that can work within local data or outside global space 
 var introEl = document.querySelector(".intro");
 var startBtnEl = document.querySelector("#start-btn");
 var questionContainerEl= document.querySelector("#question-container");
 var questionEl = document.querySelector("#question");
+// let answerButtonEl = document.querySelector("answer-buttons")
 var controlEl = document.querySelector("#control");
 var timeEl = document.querySelector("#time");
+var highScoreEl = document.querySelector("#highscore");
 var time = 50;
 var timerFun;
-var highscore = 0;
+var highScore = 0;
 var highScoreFuc;
 var questionIndex = 0;
+var gameOver;
 
-// Creadted functio /start quiz
+// Created function start quiz 
 function startQuiz() {
 console.log("startQuiz")
+// .classlist.add"hide" Sart Quiz button within div
 introEl.classList.add("hide");
+// remove hide class @ start of function
 questionContainerEl.classList.remove("hide");
+// Start Countdown (Global variable time set @ 50)
 timerFun = setInterval(countDown, 1000);
+// use of textContent is to get all elements  vs innerContent shows human readable element won't return hidden elements
 timeEl.textContent = time;
+// call questionsArray
 showQuestions()
 }
 
+// function timer countdown when complete GameOver
 function countDown () {
     time--
     timeEl.textContent = time;
     if (time <=  0) {
         time = 0;
-    // Game Over()
+    // gameOver();
     console.log("GameOver");
     }
 }
-function showQuestions () {
-var currentQuestion = questionsArray[questionIndex]
-    questionEl.textContent = currentQuestion.question
-    for (var i = 0; i < currentQuestion.answers.length; ++i) {
-        var answer = document.getElementById(`answer${i+1}`);
-    answer.textContent = currentQuestion.answers[i]; 
-    answer.onclick = () => checkQuestion(i)
 
-    }
+
+function showQuestions () {
+    var currentQuestion = questionsArray[questionIndex]
+    questionEl.textContent = currentQuestion.question
+    for (let i = 0; i < currentQuestion.answers.length; ++i) {
+        let answer = document.getElementById(`answer${i+1}`);
+    answer.textContent = currentQuestion.answers[i]; 
+    answer.addEventListener=() => checkQuestion(i)
+    
 }
+
 
 function checkQuestion (id) {
     console.log(id);
@@ -91,10 +98,12 @@ function checkQuestion (id) {
     showQuestions()
 
     }
+
     
 
 }
 function gameOver () {
+    // console.log("gameOver");
     clearInterval(timerFun);
 }
 
@@ -103,4 +112,4 @@ function gameOver () {
 
 
 
-startBtnEl.onclick = startQuiz
+startBtnEl.addEventListener("click", startQuiz())
