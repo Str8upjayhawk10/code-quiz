@@ -27,11 +27,6 @@ body {
     margin-top: 10%;
 }
 
-/* .intro {
-   margin: 25px 25px;
-    
-} */
-
 h1 { 
     text-align: center;
     
@@ -59,27 +54,13 @@ span {
     overflow: hidden;
     cursor: pointer;
 }
-/* hover effect attempt */
-/* #start-btn:focus {
-    outline: none;
-}
-#start-btn::before {
-    content: '';
-    display: block;
-    position: absolute;
-    background-color: rgb(194, 36, 36,.5);
-} */
-
 
 #question-container {
-    /* width: 60vw;
+    width: 100vw;
     height: 40vh;
-    /* border: 5px solid rgb(41, 232, 41); */
-    /* margin: 20px auto; */ 
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
+    border: none;
+    margin: 20px auto; 
+    padding-top: 3rem;
     
 }
 #question {
@@ -91,7 +72,7 @@ span {
 
 #answer1 {
     margin: 5px;
-    width:  80%;
+    width:  100%;
     height: 50px;
     font-size: 20px;
     background-color: black;
@@ -102,7 +83,7 @@ span {
 }
 #answer2 {
     margin: 5px;
-    width:  80%;
+    width:  100%;
     height: 50px;
     font-size: 20px;
     color: whitesmoke;
@@ -111,7 +92,7 @@ span {
 }
 #answer3 {
     margin: 5px;
-    width:  80%;
+    width:  100%;
     height: 50px;
     font-size: 20px;
     color: whitesmoke;
@@ -121,7 +102,7 @@ span {
 }
 #answer4 {
     margin: 5px;
-    width:  80%;
+    width:  100%;
     height: 50px;
     font-size: 20px;
     color: whitesmoke;
@@ -139,7 +120,7 @@ span {
 #enter-initials {
     width: 300px;
     position: absolute;
-    top: 5px;
+    top: 10px;
     padding-left: 25px;
     cursor: pointer;
 }
@@ -147,7 +128,7 @@ span {
     border: 3px solid rgb(41, 232, 41);
     color: whitesmoke;
     position: absolute;
-    top: 0px;
+    top: 5px;
     right: -150px;
     font-size: 25px;
     cursor: pointer;
@@ -172,12 +153,12 @@ span {
     margin: 0 10px;
     cursor: pointer;
 }
-/* .hide { 
+/* .hide {  
     display: none;
-}  */
+}   */
 
 @media screen and (max-width: 768px) {
-    .container {
+    body {
         min-width: 40em;
     }
 }

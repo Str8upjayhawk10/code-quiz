@@ -25,7 +25,7 @@ var questionsArray = [
         answers: ["A: Datatype that returns either of two values ", "B: Datatype that express a condition", "C: Used as an object to get the value of a variable", "D: None of the Above",], 
         correct: "A: Datatype that returns either of two values "
     },
-]
+];
 
 // Create Variables "Global Space" that can work within local data or outside global space 
 var introEl = document.querySelector(".intro");
@@ -45,18 +45,18 @@ var gameOver;
 
 // Created function start quiz 
 function startQuiz() {
-console.log("startQuiz")
+// console.log("startQuiz")
 // .classlist.add"hide" Sart Quiz button within div
-introEl.classList.add("hide");
+introEl.classList.remove("hide");
 // remove hide class @ start of function
-questionContainerEl.classList.remove("hide");
+questionContainerEl.classList.add("hide");
 // Start Countdown (Global variable time set @ 50)
 timerFun = setInterval(countDown, 1000);
 // use of textContent is to get all elements  vs innerContent shows human readable element won't return hidden elements
 timeEl.textContent = time;
-// call questionsArray
-showQuestions()
+showQuestions();
 }
+
 
 // function timer countdown when complete GameOver
 function countDown () {
@@ -64,14 +64,15 @@ function countDown () {
     timeEl.textContent = time;
     if (time <=  0) {
         time = 0;
-    // gameOver();
-    console.log("GameOver");
+    gameOver();
+    // console.log("GameOver");
     }
 }
 
 
 function showQuestions () {
-    var currentQuestion = questionsArray[questionIndex]
+    
+    let currentQuestion = questionsArray[questionIndex];
     questionEl.textContent = currentQuestion.question
     for (let i = 0; i < currentQuestion.answers.length; ++i) {
         let answer = document.getElementById(`answer${i+1}`);
@@ -79,9 +80,10 @@ function showQuestions () {
     answer.onclick = () => checkQuestion(i)
     
 }
+}
 
 
-function checkQuestion (id) {
+function checkQuestion(id) {
     console.log(id);
     var currentQuestion = questionsArray[questionIndex]
     if (currentQuestion.answers[id] === currentQuestion.correct) {
@@ -99,9 +101,9 @@ function checkQuestion (id) {
 
     }
 
-    
-
 }
+
+
 function gameOver () {
     // console.log("gameOver");
     clearInterval(timerFun);
